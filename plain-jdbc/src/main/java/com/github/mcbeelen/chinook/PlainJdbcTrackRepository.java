@@ -1,5 +1,9 @@
 package com.github.mcbeelen.chinook;
 
+import com.google.common.base.Stopwatch;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 import static com.github.mcbeelen.chinook.Track.TrackBuilder.aTrack;
 
@@ -58,13 +63,11 @@ public class PlainJdbcTrackRepository implements TrackRepository {
     }
 
     private Connection getConnection() {
-        Connection conn = null;
 
+        Stopwatch stopwatch = Stopwatch.createStarted();
+        Connection connection = null;
         try {
-            conn =
-                    DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/OJpwdfrCqW?" +
-                            "user=OJpwdfrCqW&password=Hzbt4PVTZY");
-
+            connection = ConnectionUtil.INSTANCE.dataSource.getConnection();
 
         } catch (SQLException ex) {
             // handle any errors
@@ -73,6 +76,8 @@ public class PlainJdbcTrackRepository implements TrackRepository {
             System.out.println("VendorError: " + ex.getErrorCode());
         }
 
-        return conn;
+        LoggerFactory.getLogger(this.getClass()).info("Get connection took: {}", stopwatch.elapsed(TimeUnit.MILLISECONDS));
+
+        return connection;
     }
 }
