@@ -28,6 +28,15 @@
         </dependency>
 
         <dependency>
+<<<<<<< HEAD
+=======
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+>>>>>>> spring-data/employee
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
@@ -38,6 +47,14 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+<<<<<<< HEAD
+=======
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.8.0-beta4</version>
+        </dependency>
+>>>>>>> spring-data/employee
 
     </dependencies>
 
