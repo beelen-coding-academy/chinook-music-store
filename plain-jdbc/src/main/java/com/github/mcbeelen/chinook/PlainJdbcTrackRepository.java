@@ -25,7 +25,9 @@ public class PlainJdbcTrackRepository implements TrackRepository {
         try (Connection connection = getConnection()) {
             try (Statement stmt = connection.createStatement()) {
 
-                ResultSet rs = stmt.executeQuery("SELECT Name, Composer FROM Track WHERE TrackID = " + trackId);
+                String sql = "SELECT Name, Composer FROM Track WHERE TrackID = " + trackId;
+
+                ResultSet rs = stmt.executeQuery(sql);
 
                 if (rs.next()) {
                     String trackName = rs.getString("Name");

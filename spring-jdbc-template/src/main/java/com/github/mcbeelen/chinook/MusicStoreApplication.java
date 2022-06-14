@@ -20,16 +20,20 @@ public class MusicStoreApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Optional<Employee> maybeEmployee = employeeRepository.findById(1L);
+        showEmployeeInfo(1L);
+        showEmployeeInfo(2L);
+        showEmployeeInfo(0L);
+        showEmployeeInfo(23432430L);
 
+    }
+
+    private void showEmployeeInfo(long id) {
+        Optional<Employee> maybeEmployee = employeeRepository.findById(id);
 
         maybeEmployee
                 .ifPresentOrElse(theEmployee -> System.out.println(theEmployee),
                         () -> System.err.println("No employee found"));
-
     }
-
-
 
 
     public static void main(String[] args) {
