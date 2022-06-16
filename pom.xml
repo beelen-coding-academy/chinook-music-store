@@ -40,8 +40,6 @@
             </dependency>
 
             <dependency>
-<<<<<<< HEAD
-=======
                 <groupId>com.zaxxer</groupId>
                 <artifactId>HikariCP</artifactId>
                 <version>4.0.3</version>
@@ -49,7 +47,6 @@
 
 
             <dependency>
->>>>>>> spring-data/employee
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.13.2</version>

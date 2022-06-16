@@ -25,9 +25,14 @@ public class MusicStoreApplication implements CommandLineRunner {
         showEmployeeInfo(0L);
         showEmployeeInfo(23432430L);
 
+
+
     }
 
     private void showEmployeeInfo(long id) {
+
+        Employee employee = new Employee();
+
         Optional<Employee> maybeEmployee = employeeRepository.findById(id);
 
         maybeEmployee
