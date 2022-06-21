@@ -16,6 +16,7 @@
         <module>model</module>
         <module>plain-jdbc</module>
         <module>spring-jdbc-template</module>
+        <module>chinook-webapp</module>
     </modules>
 
     <properties>
