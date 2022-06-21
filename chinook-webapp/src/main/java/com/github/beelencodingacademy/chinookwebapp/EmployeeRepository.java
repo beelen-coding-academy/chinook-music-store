@@ -1,4 +1,4 @@
-package com.github.mcbeelen.chinook.repositories;
+package com.github.beelencodingacademy.chinookwebapp;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;

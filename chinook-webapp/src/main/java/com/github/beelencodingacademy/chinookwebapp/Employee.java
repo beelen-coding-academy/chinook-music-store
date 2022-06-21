@@ -1,4 +1,4 @@
-package com.github.mcbeelen.chinook.repositories;
+package com.github.beelencodingacademy.chinookwebapp;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
