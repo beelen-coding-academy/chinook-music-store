@@ -5,14 +5,30 @@
 </head>
 <body>
 
-<h1>Employee Info</h1>
 
-<ul>
-    <li>FirstName : <span th:text="${employee.firstName}" /></li>
-    <li>LastName : <span th:text="${employee.lastName}" /></li>
+<h2>New employee</h2>
+
+<form action="#" th:action="@{/employee}" th:object="${employee}" method="post">
+
+    <input name="firstName" th:field="*{firstName}">
+    <input name="lastName" th:field="*{lastName}" id="lastNameInput">
+
+    <select name="manager">
+        <option value="1">Andrew</option>
+        <option value="2">Sjaak</option>
+    </select>
+
+
+</form>
+
+
+
+<h1>All existing employees</h1>
+
+<ul th:each="current : ${employees}">
+    <li>FirstName : <em><span th:text="${current.firstName}">John</span></em></li>
+    <li>LastName : <span th:text="${current.lastName}">Doe</span></li>
 </ul>
-
-// http://localhost:8080/employee/96
 
 </body>
 </html>

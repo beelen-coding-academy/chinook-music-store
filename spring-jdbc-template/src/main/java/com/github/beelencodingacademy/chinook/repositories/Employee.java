@@ -1,4 +1,4 @@
-package com.github.beelencodingacademy.chinookwebapp;
+package com.github.beelencodingacademy.chinook.repositories;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
@@ -7,23 +7,13 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table(name = "Employee")
 public class Employee {
 
-    @Id
-    @Column("EmployeeId")
-    private Integer employeeId;
-
-    @Column("FirstName")
-    private String firstName;
-    @Column("LastName")
-    private String lastName;
-
-
     public Integer getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(Integer employeeId) {
-        this.employeeId = employeeId;
-    }
+    @Id
+    @Column("EmployeeId")
+    private Integer employeeId;
 
     public String getFirstName() {
         return firstName;
@@ -40,6 +30,14 @@ public class Employee {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    @Column("FirstName")
+    private String firstName;
+    @Column("LastName")
+    private String lastName;
+
+
+
 
     @Override
     public String toString() {
