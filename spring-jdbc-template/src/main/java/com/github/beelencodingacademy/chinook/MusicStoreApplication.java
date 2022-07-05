@@ -1,9 +1,9 @@
-package com.github.mcbeelen.chinook;
+package com.github.beelencodingacademy.chinook;
 
 
+import com.github.beelencodingacademy.chinook.repositories.Employee;
+import com.github.beelencodingacademy.chinook.repositories.EmployeeRepository;
 import com.github.javafaker.Faker;
-import com.github.mcbeelen.chinook.repositories.Employee;
-import com.github.mcbeelen.chinook.repositories.EmployeeRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

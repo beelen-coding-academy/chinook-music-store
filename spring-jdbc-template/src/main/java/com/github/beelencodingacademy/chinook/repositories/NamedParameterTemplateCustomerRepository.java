@@ -1,6 +1,5 @@
-package com.github.mcbeelen.chinook.repositories;
+package com.github.beelencodingacademy.chinook.repositories;
 
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;

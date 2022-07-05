@@ -1,4 +1,4 @@
-package com.github.mcbeelen.chinook.repositories;
+package com.github.beelencodingacademy.chinook.repositories;
 
 public class Customer {
 
