@@ -1,0 +1,34 @@
+<html>
+<head>
+    <meta charset="ISO-8859-1" />
+    <title>Employee Info</title>
+</head>
+<body>
+
+
+<h2>New employee</h2>
+
+<form action="#" th:action="@{/employee}" th:object="${employee}" method="post">
+
+    <input name="firstName" th:field="*{firstName}">
+    <input name="lastName" th:field="*{lastName}" id="lastNameInput">
+
+    <select name="manager">
+        <option value="1">Andrew</option>
+        <option value="2">Sjaak</option>
+    </select>
+
+
+</form>
+
+
+
+<h1>All existing employees</h1>
+
+<ul th:each="current : ${employees}">
+    <li>FirstName : <em><span th:text="${current.firstName}">John</span></em></li>
+    <li>LastName : <span th:text="${current.lastName}">Doe</span></li>
+</ul>
+
+</body>
+</html>
